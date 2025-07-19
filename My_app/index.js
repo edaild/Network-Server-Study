@@ -1,13 +1,16 @@
-// ESM 모드
-import {createserver} from 'http';
-// 서버 구축
-const server = createServer((req, res)=>{
-    res.writeHead(200, {'content-type': 'text/plain'});         // 응답의 Haed
-    res.write('Hello node.js');                                 // 응답의 Bady
-    res.end();                                                  // 응답 종료
+import express from 'express';     // express 를 가져온다
+import path from 'path';
+
+const __dirname = path.resolve();
+
+const app = express();
+
+// middleware
+app.get('/',(req, res)=>{
+// HTML 파일 전송
+res.sendFile(__dirname + '/public/main.html');
 });
 
-// 서버 실행
-server.listen(3000, ()=>{
-    console.log('Server is listening on prot 3000');
+app.listen(3000, () =>{
+    console.log('Server is running');
 });
