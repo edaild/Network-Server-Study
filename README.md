@@ -23,3 +23,4 @@ Embarking on a journey to understand everything about network servers from socke
 
 ---
 ## 📚 이론 | Theory
+- [서버란?](https://github.com/edaild/Network-Server-Study.wiki.git)
